@@ -1,0 +1,14 @@
+UML диаграмма для Strategy (Payment)
+
++----------------------+     +-----------------------+
+| PaymentStrategy      |<>---| PaymentContext        |
++----------------------+     +-----------------------+
+| +pay(amount):bool    |     | -strategy:PaymentStrategy |
++----------------------+     | +setStrategy(s)         |
+         ^                   | +pay(amount):bool       |
+         |                   +-----------------------+
++-------------------+   +------------------+
+| CreditCardPayment |   | PayPalPayment    |
++-------------------+   +------------------+
+| +pay(amount)      |   | +pay(amount)     |
++-------------------+   +------------------+
